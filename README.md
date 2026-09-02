@@ -1,6 +1,6 @@
 # WhatsApp Web Automation Bot
 
-Sends personalized WhatsApp messages to a list of contacts and extracts their last few replies — built with Playwright.
+Sends personalized WhatsApp messages to a list of contacts and extracts their last few replies - built with Playwright.
 
 ## What it does
 1. Logs into WhatsApp Web (scan the QR code once; session is cached).
@@ -30,11 +30,11 @@ python playwright_assign.py
 First run: scan the QR code shown in the browser. Later runs reuse the saved session (`wa_session/` folder).
 
 ## Output
-- `whatsapp_report_YYYY-MM-DD.json` — full details per contact, including extracted messages.
-- `whatsapp_report_YYYY-MM-DD.xlsx` — one-row-per-contact summary (status, message, screenshot path, error).
-- `screenshots/` — a screenshot of each successfully sent message.
+- `whatsapp_report_YYYY-MM-DD.json` > full details per contact, including extracted messages.
+- `whatsapp_report_YYYY-MM-DD.xlsx` > one-row-per-contact summary (status, message, screenshot path, error).
+- `screenshots/` > a screenshot of each successfully sent message.
 
 ## Notes
 - Random 2–5s delays between actions to avoid looking automated.
-- Failed/not-found contacts are logged with an error, not skipped silently — one bad contact won't crash the run.
+- Failed/not-found contacts are logged with an error, not skipped silently > one bad contact won't crash the run.
 - WhatsApp Web's HTML changes periodically. If something stops working, right-click the relevant element in the browser → **Inspect**, and update the matching selector in the script.
